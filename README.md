@@ -11,22 +11,28 @@ This repository packages https://bitbucket.org/achary/rx-marbles/ into a Docker 
 
 ### Building
 
-Run the following command after having clone the repository:
+Run the following command after having cloned this repository:
 
 ```bash
-docker build -t cescoffier/rx-marbles .
+docker build -t heckj/rxmarbles .
 ```
 
 or just use:
 
 ```bash
-docker pull cescoffier/rx-marbles
+docker pull heckj/rxmarbles
+```
+
+### debugging
+
+```bash
+docker run -it --entrypoint=/bin/sh heckj/rxmarbles
 ```
 
 ### Running
 
 ```bash
-docker run -i -v $PWD:/data cescoffier/rx-marbles
+docker run -i -v $PWD:/data heckj/rxmarbles
 ```
 
 It searches for all `.txt` files located into the (container) `data` directory and parse them. For each diagram a `.svg` file and `.png` file are created.
